@@ -3,6 +3,11 @@
 #include <string.h>
 #include <assert.h>
 
+// LIMITATIONS:
+// 1. Cannot use 0
+// 2. username has a limit of 100 bytes
+// 3. commets too can not exceed 100 bytes
+
 char *getfield(char *line, int num) // Traversing or Tokenizing a ':' seperated String
 {
     char *tok;
