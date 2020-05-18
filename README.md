@@ -2,6 +2,8 @@
 PES programs - 2020 Quarantine and chill
 
 ------------------Guidelines which i obviously wont follow lmao-------------------
+
+
 GUIDELINES TO FOLLOW WHILE WRITING CODE
 1. Make sure that you have your code in at least 2 .c files and one .h file.
 2. You need to have a relevant makefile to build the executable.
