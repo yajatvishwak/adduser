@@ -1,3 +1,4 @@
+#include "defination.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,37 +7,7 @@
 // LIMITATIONS:
 // 1. Cannot use 0
 // 2. username has a limit of 100 bytes
-// 3. commets too can not exceed 100
-
-char *getfield(char *line, int num) // Traversing or Tokenizing a ':' seperated String
-{
-    char *tok;
-    for (tok = strtok(line, ":");
-         tok && *tok;
-         tok = strtok(NULL, ":\n"))
-    {
-        if (!--num)
-            return tok;
-    }
-    return NULL;
-}
-
-int str2int(char *s) // String -> number converter
-{
-    int i, n;
-    for (n = 0, i = 0; s[i] != '\0'; i++)
-        n = n * 10 + (s[i] - '0');
-    return n;
-}
-char *concat(const char *s1, const char *s2) // UDF to concat because whynot?
-{
-    const size_t len1 = strlen(s1);
-    const size_t len2 = strlen(s2);
-    char *result = malloc(len1 + len2 + 1);
-    memcpy(result, s1, len1);
-    memcpy(result + len1, s2, len2 + 1);
-    return result;
-}
+// 3. comments too can not exceed 100
 
 int main(int argc, char **argv)
 {
@@ -51,7 +22,7 @@ int main(int argc, char **argv)
     char user[100];                                                                                      // the name of the user
     int isPresent = 0;                                                                                   // variable to check if the user is already present
     char *floc;                                                                                          // To store the env pfile variable
-    putenv("PFILE=/media/yajat-vishwakk/MainHDD/Coding/college-programs-and-projects/pes-prog/adduser"); //enter your env variable here
+    putenv("PFILE=/media/yajat-vishwakk/MainHDD/Coding/college-programs-and-projects/pes-prog/adduser"); //enter your env variabLE
     assert((floc = getenv("PFILE")) != NULL);                                                            // setting floc to env variable
 
     FILE *passwdPTR;                                  // File Pointer to write in file in append mode
